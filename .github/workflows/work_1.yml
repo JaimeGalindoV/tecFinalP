@@ -10,19 +10,19 @@ jobs:
       - name: Print test
         uses: dawidd6/action-send-mail@v4
         with:
-          connection_url: smtp://jaimeenriquegalindovillegas@gmail.com:xijo miwj kcqp kdqj@smtp.gmail.com:465
+          #connection_url: smtp://jaimeenriquegalindovillegas@gmail.com:xijo miwj kcqp kdqj@smtp.gmail.com:465
 
         # Required mail server address if not connection_url:
-          # server_address: smtp.gmail.com
+          server_address: smtp.gmail.com
           # # Server port, default 25:
-          # server_port: 465
+          server_port: 465
           # Optional whether this connection use TLS (default is true if server_port is 465)
           #
           secure: true
           # Optional (recommended) mail server username:
-          # username: ${{secrets.MAIL_USERNAME}}
+          username: ${{secrets.MAIL_USERNAME}}
           # Optional (recommended) mail server password:
-          # password: ${{secrets.MAIL_PASSWORD}}
+          password: ${{secrets.MAIL_PASSWORD}}
 
           # Required mail subject:
           subject: Github Actions job result
