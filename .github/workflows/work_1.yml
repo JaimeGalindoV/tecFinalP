@@ -11,7 +11,7 @@ jobs:
         uses: dawidd6/action-send-mail@v4
         with:
           connection_url: ${{secrets.MAIL_CONNECTION}}
-          
+
         # Required mail server address if not connection_url:
           # server_address: smtp.gmail.com
           # # Server port, default 25:
@@ -27,7 +27,7 @@ jobs:
           # Required mail subject:
           subject: Github Actions job result
           # Required recipients' addresses:
-          from: "u know who I am :c"
-          to: smfjlpbbbvoxswysrp@nbmbb.com
+          from: ${{secrets.MAIL_USERNAME}}
+          to: ${{secrets.MAIL_USERNAME}}
           body: Build job of ${{github.repository}} main completed successfully!
 
